@@ -1,3 +1,17 @@
-<button type="button" [routerLink]="['/home']">Home</button>
-<button type="button" [routerLink]="['/signin']">Sign in</button>
+<md-toolbar color="primary">Rose Routing
+  <span fxFlex></span>
+  <a md-button [routerLink]="['/home']" routerLinkActive="active"><md-icon>home</md-icon></a>
+
+  <a md-button [mdMenuTriggerFor]="moenchMenu" routerLinkActive="active">Moench</a>
+  <md-menu [overlapTrigger]="false" #moenchMenu="mdMenu">
+    <button md-menu-item [routerLink]="['/moench', '200']" routerLinkActive="active">200</button>
+    <button md-menu-item [routerLink]="['/moench', '100']" routerLinkActive="active">100</button>
+    <button md-menu-item [routerLink]="['/moench', 'L100']" routerLinkActive="active">L100</button>
+    <button md-menu-item [routerLink]="['/moench', 'L200']" routerLinkActive="active">L200</button>
+  </md-menu>
+
+<a md-button  [routerLink]="['/signin']" routerLinkActive="active"><md-icon>lock_open</md-icon> Sign In</a>
+</md-toolbar>
+<md-card>
 <router-outlet></router-outlet>
+</md-card>

@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from "app/home/home.component";
 import { SigninComponent} from 'app/signin/signin.component';
+import { MoenchComponent} from 'app/moench/moench.component';
 
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'home'},
+  {path: 'moench/:floor', component: MoenchComponent},
   {path: 'home', component: HomeComponent},
   {path: 'signin', component: SigninComponent},
-  { path:'**', redirectTo: 'home'}
+  { path:'**', redirectTo: 'home'},
 ];
 
 @NgModule({

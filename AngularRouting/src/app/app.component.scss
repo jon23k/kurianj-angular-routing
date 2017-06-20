@@ -1,0 +1,11 @@
+.active {
+    background-color: #cc99ff;
+    font-weight: bold;
+}
+md-card{
+    margin: 50px;
+}
+button[md-menu-item].active{
+    font-weight: bold;
+    background-color: #cc99ff;
+}
