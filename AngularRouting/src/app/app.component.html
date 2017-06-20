@@ -2,7 +2,7 @@
   <span fxFlex></span>
   <a md-button [routerLink]="['/home']" routerLinkActive="active"><md-icon>home</md-icon></a>
 
-  <a md-button [mdMenuTriggerFor]="moenchMenu" routerLinkActive="active">Moench</a>
+  <a id="moench-btn" md-button [mdMenuTriggerFor]="moenchMenu" routerLinkActive="active">Moench</a>
   <md-menu [overlapTrigger]="false" #moenchMenu="mdMenu">
     <button md-menu-item [routerLink]="['/moench', '200']" routerLinkActive="active">200</button>
     <button md-menu-item [routerLink]="['/moench', '100']" routerLinkActive="active">100</button>
