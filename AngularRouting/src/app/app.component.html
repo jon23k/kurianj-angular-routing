@@ -1,5 +1,6 @@
-<md-toolbar color="primary">Rose Routing
-  <span fxFlex></span>
+<md-toolbar color="primary">
+  <span fxHide.xs>Rose Routing</span>
+  <span fxHide.xs fxFlex></span>
   <a md-button [routerLink]="['/home']" routerLinkActive="active"><md-icon>home</md-icon></a>
 
   <a id="moench-btn" md-button [mdMenuTriggerFor]="moenchMenu" routerLinkActive="active">Moench</a>
@@ -12,6 +13,8 @@
 
 <a md-button  [routerLink]="['/signin']" routerLinkActive="active"><md-icon>lock_open</md-icon> Sign In</a>
 </md-toolbar>
-<md-card>
+<div fxLayoutAlign="center center">
+<md-card class="container">
 <router-outlet></router-outlet>
 </md-card>
+</div>
